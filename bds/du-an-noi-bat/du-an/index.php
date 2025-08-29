@@ -1028,14 +1028,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="fill banner-link"></div>
                         <div id="text-box-1823661108" class="text-box banner-layer x0 md-x0 lg-x0 y90 md-y90 lg-y90 res-text">
                           <div class="text dark">
-                            <div class="text-inner text-left">
+                            <!-- <div class="text-inner text-left">
                               <a class="button primary" style="border-radius:5px;">
                                 <span><?php echo $result['service_name']; ?></span>
                               </a>
                               <h3>
                                 <b><?php echo $result['service_name']; ?></b>
                               </h3>
-                            </div>
+                            </div> -->
                           </div>
                           <!-- text-box-inner -->
                           <style scope="scope">
@@ -1105,10 +1105,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       <ul class="nav nav-pills nav-uppercase nav-size-large nav-left">
                         <li class="tab active has-icon">
                           <a href="#tab_tổng-quan">
-                            <span>Tổng quan</span>
+                            <span>TỔNG QUAN DỰ ÁN <?php echo $result['service_name']; ?></span>
                           </a>
                         </li>
-                        <li class="tab has-icon">
+                        <!-- <li class="tab has-icon">
                           <a href="#tab_vị-trí">
                             <span>Vị trí</span>
                           </a>
@@ -1127,7 +1127,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                           <a href="#tab_show-sản-phẩm">
                             <span>Show sản phẩm</span>
                           </a>
-                        </li>
+                        </li> -->
                       </ul>
                       <div class="tab-panels">
                         <div class="panel active entry-content" id="tab_tổng-quan">

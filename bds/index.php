@@ -1193,9 +1193,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="col small-12 large-12" data-animate="fadeInRight">
                   <div class="col-inner">
                     <div class="row large-columns-5 medium-columns-3 small-columns-2 row-collapse row-full-width has-shadow row-box-shadow-1 row-box-shadow-2-hover slider row-slider slider-nav-simple slider-nav-light slider-nav-push" data-flickity-options='{"imagesLoaded": true, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": true,"percentPosition": true,"pageDots": false, "rightToLeft": false, "autoPlay" : 6000}'>
+                      <?php $services = getAllServices($conn);
+                      foreach ($services as $service): ?>
                       <div class="page-col col">
                         <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/vincity/index.php" title="Vincity" target="">
+                          <a class="plain" href="du-an-noi-bat/du-an/index.php?id=<?php echo $service['service_id']; ?>" title="<?php echo $service['service_name']; ?>" target="">
                             <div class="page-box box has-hover">
                               <div class="box-image">
                                 <div class="box-image image-cover" style="padding-top:75%;">
@@ -1206,7 +1208,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                               <!-- box-image -->
                               <div class="box-text text-center">
                                 <div class="box-text-inner">
-                                  <p>Vincity</p>
+                                  <p><?php echo $service['service_name']; ?></p>
                                 </div>
                                 <!-- box-text-inner -->
                               </div>
@@ -1217,207 +1219,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                         <!-- .col-inner -->
                       </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/swanpark/index.php" title="Swan Park" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1365" src="wp-content/uploads/2018/01/bg-duannoibst.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-300x200.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-768x512.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-1024x683.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>Swan Park</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/villa-park/index.php" title="Villa Park" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1365" src="wp-content/uploads/2018/01/bg-doitac.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-300x200.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-768x512.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-1024x683.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>Villa Park</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/gem-riverside/index.php" title="Gem Riverside" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1365" src="wp-content/uploads/2018/01/bg-duannoibst.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-300x200.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-768x512.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-1024x683.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>Gem Riverside</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/saigon-sport-city/index.php" title="Saigon Sport City" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1365" src="wp-content/uploads/2018/01/bg-duannoibst.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-300x200.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-768x512.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-1024x683.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>Saigon Sport City</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/river-park-2/index.php" title="River Park 2" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1365" src="wp-content/uploads/2018/01/bg-doitac.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-300x200.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-768x512.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-1024x683.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>River Park 2</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/palm-heights/index.php" title="Palm Heights" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1365" src="wp-content/uploads/2018/01/bg-duannoibst.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-300x200.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-768x512.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-duannoibst-1024x683.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>Palm Heights</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/can-ho-dat-xanh-lien-phuong/index.php" title="Căn hộ Đất Xanh Liên Phường" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1365" src="wp-content/uploads/2018/01/bg-doitac.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-300x200.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-768x512.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-doitac-1024x683.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>Căn hộ Đất Xanh Liên Phường</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
-                      <div class="page-col col">
-                        <div class="col-inner">
-                          <a class="plain" href="du-an-noi-bat/swan-bay/index.php" title="Swan Bay" target="">
-                            <div class="page-box box has-hover">
-                              <div class="box-image">
-                                <div class="box-image image-cover" style="padding-top:75%;">
-                                  <img width="2048" height="1425" src="wp-content/uploads/2018/01/bg-form-lienhe.jpg" class="attachment-original size-original" alt="" srcset="https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-form-lienhe.jpg 2048w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-form-lienhe-300x209.jpg 300w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-form-lienhe-768x534.jpg 768w, https://mauweb.monamedia.net/investmentland/wp-content/uploads/2018/01/bg-form-lienhe-1024x713.jpg 1024w" sizes="(max-width: 2048px) 100vw, 2048px" />
-                                </div>
-                                <!-- image -->
-                              </div>
-                              <!-- box-image -->
-                              <div class="box-text text-center">
-                                <div class="box-text-inner">
-                                  <p>Swan Bay</p>
-                                </div>
-                                <!-- box-text-inner -->
-                              </div>
-                              <!-- box-text -->
-                            </div>
-                            <!-- .image-box .box -->
-                          </a>
-                        </div>
-                        <!-- .col-inner -->
-                      </div>
-                      <!-- .col -->
+                      <?php endforeach; ?>
                     </div>
                   </div>
                 </div>
